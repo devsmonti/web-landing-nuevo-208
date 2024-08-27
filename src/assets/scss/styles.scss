@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import "~bootstrap/scss/bootstrap";
+@import "./variables";
+@import "./globals";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/intro";
+
+.floatWsp {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  bottom: 30px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: -1px -1px 16px -3px rgba(0, 0, 0, 0.56);
+  -webkit-box-shadow: -1px -1px 16px -3px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: -1px -1px 16px -3px rgba(0, 0, 0, 0.56);
+  z-index: 10000;
+}
+
+.floatWsp img {
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 3px;
+}
+
+.noVehicles {
+  font-size: 16px;
+}
+
+.bg-form {
+  background-color: #fff !important;
+  padding: 20px;
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+.btnVerde {
+  background-color: #39a935;
+  color: white;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  border-radius: 0px;
+  font-weight: bold;
+
+  padding: 10px 25px;
+
+  margin: 0 auto !important;
+  display: block;
+  border-radius: 10px;
+  &:hover {
+    background-color: #39a935;
+    color: white;
+  }
+}
+.btnCancelar {
+  background-color: transparent !important;
+  color: #333;
+  width: 100%;
+  font-size: 14px;
+  border: none !important;
+  border-radius: 0px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+  margin: 0 auto !important;
+  display: block;
+  border-radius: 50px;
+  &:hover,
+  &:focus,
+  &:visited {
+    background-color: transparent !important;
+    color: red !important;
+  }
+}
+.inputs-form-largo {
+  color: #6f6f6f;
+  border-radius: 0;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  font-size: 16px;
+  resize: none;
+  border: solid 1px #888383;
+}
+select.inputs-form-largo {
+  padding: 0.375rem 0.75rem;
+}
+.hace-tu-solicutud {
+  color: #1e1e1e;
+  font-size: 20px;
+  text-align: center;
+}
+.modal-open .modal {
+  z-index: 999999;
+}
+
+/*Mostrar ocultar boton whatsapp y email*/
+.contenedor-boton-whatsapp {
+  display: none;
+}
+@media (max-width: 768px) {
+  .contenedor-boton-email {
+    display: none;
+  }
+  .contenedor-boton-whatsapp {
+    display: block;
+  }
+}
+
+.modalMarcas {
+  .boxMarca {
+    background: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+.tabsNuevas {
+  border-bottom: 3px solid transparent;
+  border-radius: 0 !important;
+}
+
+.tabsNuevas .nav-link {
+  border-bottom: 3px solid #ccc;
+  border-radius: 0 !important;
+  color: #ccc;
+}
+
+.tabsNuevas .nav-link:hover {
+  border-bottom: 3px solid #ad8707;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  color: #ad8707 !important;
+  border-radius: 0 !important;
+}
+
+.tabsNuevas .nav-link.active {
+  border-bottom: 3px solid #ad8707;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  color: #ad8707 !important;
+  border-radius: 0 !important;
+}
+
+.header-new {
+}
+
+.text-footer {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15.5px;
+  line-height: 25px;
+
+  color: #ffffff;
+}
+
+.boxSpec {
+  h6 {
+    color: #323232;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-family: "Roboto";
+
+    @media (max-width: 767px) {
+      font-size: 19px;
+    }
+  }
+  p {
+    color: #323232;
+    text-align: center;
+
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 19.5px */
+  }
+}
+.stickyHead {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1020 !important;
+}

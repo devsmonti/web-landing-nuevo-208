@@ -1,0 +1,31 @@
+.footer {
+  background-color: #000;
+  padding-top: 40px;
+  padding-bottom: 35px;
+}
+
+.footerWhite {
+  background-color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  h4 {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+    /* identical to box height, or 29px */
+
+    color: #000000;
+    text-align: center;
+  }
+}
+
+.linksFooter {
+  li a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
