@@ -182,7 +182,7 @@ const Modelos = () => {
             "Motor T200 y caja automática CVT de 7 marchas",
             "Parrilla color carrocería",
             "Faros Full LED",
-            "Llantas 17'' diamantadas y pasaruedas en negro brillante",
+            "Llantas 17'' diamantadas y pasaruedas negro",
             "Alerón trasero y salida de escape cromada",
             "Interior con costuras verdes GT",
             "Volante con insignia GT",

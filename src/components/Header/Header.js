@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <Container fluid className="stickyHead header-new">
+    <Container fluid className="stickyHead">
       <Row>
         <Container fluid className="header">
           <Container>

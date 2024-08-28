@@ -4,10 +4,6 @@ import chevronback from "../../assets/img/chevronback.svg";
 import chevronforward from "../../assets/img/chevronforward.svg";
 
 const TabModelo = ({ item, selectedColor, selectedTransmision, setSelectedTransmision, setSelectedColor }) => {
-  console.log(selectedColor, "Selected color");
-  console.log(item, "Selected item");
-  console.log(item?.types.filter((t) => t.transmision === selectedTransmision)[0]);
-
   let coloresTotales = item.types
     .filter((t) => t.transmision === selectedTransmision)[0]
     .colores?.map((colores) => colores);
@@ -23,7 +19,6 @@ const TabModelo = ({ item, selectedColor, selectedTransmision, setSelectedTransm
     let nextIndex = (currentIndex + 1) % coloresTotales.length;
     selectedColor = coloresTotales[nextIndex].color;
     setSelectedColor(coloresTotales[nextIndex]);
-    console.log("Next color selected:", selectedColor);
   }
 
   // Function to move to the previous color
@@ -32,7 +27,6 @@ const TabModelo = ({ item, selectedColor, selectedTransmision, setSelectedTransm
     let prevIndex = (currentIndex - 1 + coloresTotales.length) % coloresTotales.length;
     selectedColor = coloresTotales[prevIndex].color;
     setSelectedColor(coloresTotales[prevIndex]);
-    console.log("Previous color selected:", selectedColor);
   }
 
   const boldSpecs = [
@@ -40,7 +34,7 @@ const TabModelo = ({ item, selectedColor, selectedTransmision, setSelectedTransm
     "Motor EC5 1.6L y caja automática de 6 marchas",
     "Motor T200 y caja automática CVT de 7 marchas",
     "Parrilla color carrocería",
-    "Llantas 17'' diamantadas y pasaruedas en negro brillante",
+    "Llantas 17'' diamantadas y pasaruedas negro",
     "Alerón trasero y salida de escape cromada",
     "Interior con costuras verdes GT",
     "Volante con insignia GT",
@@ -123,7 +117,7 @@ const TabModelo = ({ item, selectedColor, selectedTransmision, setSelectedTransm
       <Row className="pt-3">
         <Col>
           <Row>
-            <Col md={11} xl={11} xxl={11} xs={12} className="mx-auto pt-md-1 pt-4 text-center">
+            <Col md={11} xl={11} xxl={11} xs={11} className="mx-auto pt-md-1 pt-md-4 pt-1 text-center">
               <a
                 href={"#form"}
                 target={"_self"}
@@ -136,7 +130,7 @@ const TabModelo = ({ item, selectedColor, selectedTransmision, setSelectedTransm
           </Row>
 
           <Row>
-            <Col md={12} xl={12} xxl={12} xs={12} className="mx-auto pt-md-1 pt-4">
+            <Col md={12} xl={12} xxl={12} xs={12} className="mx-auto pt-md-1 pt-md-4 pt-0">
               <a href={item.ficha} className="linkDefault d-block mx-auto" target="_blank" rel="noreferrer">
                 <div className="text-center pt-4">
                   <div style={{ color: "#000" }}>Ficha Técnica</div>
