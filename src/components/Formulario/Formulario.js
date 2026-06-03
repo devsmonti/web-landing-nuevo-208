@@ -3,11 +3,10 @@ import { useState } from "react";
 import { sendPostRequest } from "../../config/desol";
 import loadingImg from "../../assets/img/loading.svg";
 import check from "../../assets/img/check.png";
+import { getUtmFromUrlOrStorage } from "../../utils/utm";
 
 const Formulario = () => {
-  const query = new URLSearchParams(window.location.search);
-  const utm_source = (query && query.get("utm_source")) || sessionStorage.getItem("utm_source");
-  const utm_medium = (query && query.get("utm_medium")) || sessionStorage.getItem("utm_medium");
+  const { utm_source, utm_medium } = getUtmFromUrlOrStorage();
 
   const [validated, setValidated] = useState(false);
   const [status, setStatus] = useState(null);

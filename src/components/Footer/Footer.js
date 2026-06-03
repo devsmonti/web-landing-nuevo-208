@@ -5,19 +5,12 @@ import yt from "../../assets/img/yt.png";
 import fb from "../../assets/img/fb.png";
 import ig from "../../assets/img/ig.png";
 import { Link } from "react-scroll";
+import { getUtmFromUrlOrStorage, persistUtmFromParams } from "../../utils/utm";
 
 const Footer = () => {
   const query = new URLSearchParams(window.location.search);
-  if (query) {
-    if (query.get("utm_source")) {
-      sessionStorage.setItem("utm_source", query.get("utm_source"));
-    }
-    if (query.get("utm_medium")) {
-      sessionStorage.setItem("utm_medium", query.get("utm_medium"));
-    }
-  }
-  const utm_source = query && query.get("utm_source");
-  const utm_medium = query && query.get("utm_medium");
+  persistUtmFromParams(query);
+  const { utm_source, utm_medium } = getUtmFromUrlOrStorage();
 
   let utms = "";
   if (utm_source !== null && utm_medium !== null) {
